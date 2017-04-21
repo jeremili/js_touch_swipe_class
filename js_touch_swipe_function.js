@@ -3,7 +3,7 @@ function swipe(element, delta, callback){
 	var yDown = null;
 	var doTouchBreak = null;
 	var minDelta = delta; // delta pixel detection start
-	var selector = element = typeof(element) === 'string' ? document.querySelector(element) : element; // scope of the listener
+	var selector = typeof(element) === 'string' ? document.querySelector(element) : element; // scope of the listener
 
 	selector.addEventListener('touchstart', handleTouchStart, false);
 	selector.addEventListener('touchmove', handleTouchMove, false);
