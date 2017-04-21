@@ -66,6 +66,11 @@ function swipe(element, delta, callback){
 }
 
 //call main function with delta parameter and callback
+/**
+* @param1 - DOM element or custom querySelector
+* @param2 - delta when detection "start"
+* @param3 - callback function
+**/
 swipe('*', 0, function(e) {
     switch (e) {
         case 'left':
