@@ -28,9 +28,9 @@ function swipe(delta, callback){
     
 		var xDiff = xDown - xUp;
 		var yDiff = yDown - yUp;
-    
+		
 		// horizontal swipe
-		if (Math.abs( xDiff ) > Math.abs( yDiff )) {
+		if (Math.abs(xDiff) > Math.abs(yDiff)) {
 			if (xDiff > minDelta) {
 				/* left swipe */
                 if(typeof callback == "function")
