@@ -28,7 +28,7 @@ function swipe(delta, callback){
     
 		var xDiff = xDown - xUp;
 		var yDiff = yDown - yUp;
-		
+
 		// horizontal swipe
 		if (Math.abs(xDiff) > Math.abs(yDiff)) {
 			if (xDiff > minDelta) {
@@ -63,3 +63,25 @@ function swipe(delta, callback){
 		}
 	};
 }
+
+//call main function with delta parameter and callback
+swipe(0,function(e) {
+    switch (e) {
+        case 'left':
+            /** do something **/
+
+            break;
+        case 'right':
+            /** do something **/
+            
+            break;
+        case 'up':
+            /** do something **/
+            
+            break;
+        case 'down':
+            /** do something **/
+            
+            break;
+    }
+});
