@@ -1,13 +1,14 @@
-function swipe(delta, callback){
+function swipe(element, delta, callback){
 	var xDown = null;
 	var yDown = null;
 	var doTouchBreak = null;
 	var minDelta = delta; // delta pixel detection start
+	var selector = element = typeof(element) === 'string' ? document.querySelector(element) : element; // scope of the listener
 
-	document.addEventListener('touchstart', handleTouchStart, false);
-	document.addEventListener('touchmove', handleTouchMove, false);
-	document.addEventListener('touchend', handleTouchEnd, false);
-	document.addEventListener('touchcancel', handleTouchEnd, false);
+	selector.addEventListener('touchstart', handleTouchStart, false);
+	selector.addEventListener('touchmove', handleTouchMove, false);
+	selector.addEventListener('touchend', handleTouchEnd, false);
+	selector.addEventListener('touchcancel', handleTouchEnd, false);
 
 	function handleTouchEnd() {
 		doTouchBreak = null;
@@ -65,7 +66,7 @@ function swipe(delta, callback){
 }
 
 //call main function with delta parameter and callback
-swipe(0,function(e) {
+swipe('*', 0, function(e) {
     switch (e) {
         case 'left':
             /** do something **/
