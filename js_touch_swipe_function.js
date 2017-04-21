@@ -1,4 +1,4 @@
-function swipe(delta, callback){
+function swipe( delta, callback ){
 	    var xDown = null;
 	    var yDown = null;
 	    var doTouchBreak = null;
